@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+$dark_cyan: hsl(185, 75%, 39%);
+$very_dark_desaturated_blue: hsl(229, 23%, 23%);
+$dark_grayish_blue: hsl(227, 10%, 46%);
+
+$dark_gray: hsl(0, 0%, 59%);
+
+*{  
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+
+    background-color: $dark_cyan;
+    background-image: url("./images/bg-pattern-top.svg"),
+                      url("./images/bg-pattern-bottom.svg");
+    background-position: top -50vh right 50vw,
+                         bottom -50vh left 50vw;
+    background-repeat: no-repeat;
+
+    font-family: "Kumbh Sans", sans-serif;
+
+    display: grid;
+    grid-template-areas: '.' 'card' 'footer';
+    grid-template-rows: 1 auto 1;
+
+}
+
+main{
+    grid-area: card;
+    min-width: 300px;
+    width: 80%;
+
+
+    height: 400px;
+
+    box-sizing: border-box;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: white;
+
+    align-self: center;
+}
+
+.header{
+    width: 100%;
+    height: 40%;
+    background-image: url("./images/bg-pattern-card.svg");
+}
+
+.user{
+    border-bottom: 1px solid rgba(169, 169, 169, 0.315);
+
+    .user_image{
+        width: 96px;
+        border-radius: 50%;
+        border: white 5px solid;
+        overflow: hidden;
+
+        margin: -48.5px auto 0;
+
+        img{
+            display: block;
+        }
+    }
+
+    .user_personal_info{
+        margin-top: 1.2rem;
+        margin-bottom: 1.2rem;
+
+        display: block;
+
+        .user_name{
+            display:inline;
+            color: $very_dark_desaturated_blue;
+        }
+
+        .user_age{
+            color:$dark_gray;
+        }
+
+        .user_city{
+            margin-top: 0.5rem;
+            display: block;
+            font-size: 0.8rem;
+            color:$dark_gray;
+        }
+    }
+
+}
+
+.data{
+    list-style: none;
+
+    margin: 1rem 10%;
+    padding-left: 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 0.5rem;
+
+    li{
+        text-align: center;
+        font-size: 0.6rem;
+        letter-spacing:0.1rem;
+        color:$dark_gray;
+
+        span{
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 0.3rem;
+
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 0;
+            color: $very_dark_desaturated_blue;
+        }
+    }
+}
+
+footer{
+    grid-area: footer;
+    align-self: flex-end;
+
+    padding-bottom: 0.5em;
+    a{
+        font-size: 11px;
+    }
+}
+
+@media screen and (min-width:500px) {
+    main{
+        max-width: 400px;
+    }
+}

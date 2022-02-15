@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  font-size: 18px;
+  text-align: center;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #19a2ae;
+  background-image: url("./images/bg-pattern-top.svg"), url("./images/bg-pattern-bottom.svg");
+  background-position: top -50vh right 50vw, bottom -50vh left 50vw;
+  background-repeat: no-repeat;
+  font-family: "Kumbh Sans", sans-serif;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: '.' 'card' 'footer';
+  -ms-grid-rows: 1 auto 1;
+      grid-template-rows: 1 auto 1;
+}
+
+main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: card;
+  min-width: 300px;
+  width: 80%;
+  height: 400px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: white;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.header {
+  width: 100%;
+  height: 40%;
+  background-image: url("./images/bg-pattern-card.svg");
+}
+
+.user {
+  border-bottom: 1px solid rgba(169, 169, 169, 0.315);
+}
+
+.user .user_image {
+  width: 96px;
+  border-radius: 50%;
+  border: white 5px solid;
+  overflow: hidden;
+  margin: -48.5px auto 0;
+}
+
+.user .user_image img {
+  display: block;
+}
+
+.user .user_personal_info {
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+  display: block;
+}
+
+.user .user_personal_info .user_name {
+  display: inline;
+  color: #2d3248;
+}
+
+.user .user_personal_info .user_age {
+  color: #969696;
+}
+
+.user .user_personal_info .user_city {
+  margin-top: 0.5rem;
+  display: block;
+  font-size: 0.8rem;
+  color: #969696;
+}
+
+.data {
+  list-style: none;
+  margin: 1rem 10%;
+  padding-left: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -webkit-column-gap: 0.5rem;
+          column-gap: 0.5rem;
+}
+
+.data li {
+  text-align: center;
+  font-size: 0.6rem;
+  letter-spacing: 0.1rem;
+  color: #969696;
+}
+
+.data li span {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 0.3rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: #2d3248;
+}
+
+footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: footer;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding-bottom: 0.5em;
+}
+
+footer a {
+  font-size: 11px;
+}
+
+@media screen and (min-width: 500px) {
+  main {
+    max-width: 400px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
